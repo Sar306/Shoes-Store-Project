@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="navbar">
+      <a href="index.html" class="logo">SEPATU</a>
+      <form class="search-bar" action="" method="get">
+        <input type="search" name="q" placeholder="Cari sepatu idealmu di sini!">
+        <button type="submit">Cari</button>
+      </form>
+      
+
+      <nav class="right-nav">
+        <a href="index.html"><img src="icons/icons8-log-in-32.png">Login</a>
+        <a href="index.html"><img src="icons/icons8-heart-32.png">Wishlist</a>
+        <a href="index.html"><img src="icons/icons8-shopping-basket-32.png">Keranjang</a>
+      </nav>
+    </div>
+
+    <nav class="categories">
+      <ul>
+        <li><a href=""">New Arrivals</a></li>
+        <li><a href=""">Men</a></li>
+        <li><a href=""">Womem</a></li>
+        <li><a href=""">Kids</a></li>
+        <li><a href=""">Sneakers</a></li>
+        <li><a href=""">Running</a></li>
+        <li><a href=""">Formal</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="hero">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <video class="d-block mx-auto" autoplay muted loop playsinline>
+                <source src="Carousel Produk/Carousel4.mp4" type="video/mp4" width="1000px">
+              </video>
+            </div>
+            <div class="carousel-item">
+              <img src="Carousel Produk/Carousel7.jpg" class="d-block mx-auto" width="1000px">
+            </div>
+            <div class="carousel-item">
+              <video class="d-block mx-auto" autoplay muted loop playsinline>
+              <source src="Carousel Produk/Carousel5.mp4" type="video/mp4" width="1000px">
+            </video>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section class="product1">
+        <div class="section-head">
+          <h2>Produk Terbaru</h2>
+          <a href="/new-arrivals">Lihat Semua</a>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <a href="/produk/sepatu-running" class="product-link">
+              <div class="product-img">
+                <img src="Produk Image 1/produkA1.webp" alt="Sepatu Running">
+              </div>
+              <div class="product-info">
+                <p class="product-category">Running</p>
+                <h3 class="product-name">Sepatu Running Pro</h3>
+                <p class="product-price">Rp 450.000</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="product-card">
+            <a href="/produk/sneakers-classic" class="product-link">
+              <div class="product-img">
+                <img src="Produk Image 1/produkA2.webp" alt="Sneakers Classic">
+              </div>
+              <div class="product-info">
+                <p class="product-category">Sneakers</p>
+                <h3 class="product-name">Sneakers Classic</h3>
+                <p class="product-price">Rp 520.000</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="product-card">
+            <a href="/produk/sepatu-formal" class="product-link">
+              <div class="product-img">
+                <img src="Produk Image 1/produkA3.jpg" alt="Sepatu Formal">
+              </div>
+              <div class="product-info">
+                <p class="product-category">Formal</p>
+                <h3 class="product-name">Sepatu Formal Leather</h3>
+                <p class="product-price">Rp 680.000</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="product-card">
+            <a href="/produk/sepatu-kids" class="product-link">
+              <div class="product-img">
+                <img src="Produk Image 1/produkA4.avif" alt="Sepatu Anak">
+              </div>
+              <div class="product-info">
+                <p class="product-category">Kids</p>
+                <h3 class="product-name">Sepatu Anak Fun</h3>
+                <p class="product-price">Rp 300.000</p>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </section>
+    </main>
+  </header>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
