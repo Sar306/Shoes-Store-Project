@@ -136,8 +136,6 @@ body {
 }
 
 .products {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 48px 32px;
 }
 
@@ -165,17 +163,25 @@ body {
 }
 
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 24px;
-  margin: 35px;
+  border-radius: 12px;
+  overflow-x: auto;
+  padding: 8px 4px 24px;
+  margin-right: 35px;
+  margin-left: 35px;
+  padding: 15px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 24px;
 }
 
 .product-card {
+  flex: 0 0 280px;
   background: rgb(255, 255, 255);
-  border: 1px solid rgb(229, 229, 229);
+  border: 1px solid rgb(233, 233, 233);
   border-radius: 12px;
   overflow: hidden;
+  scroll-snap-align: start;
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
