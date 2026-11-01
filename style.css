@@ -328,3 +328,24 @@ body {
   margin-top: 18px;
   font-size: 15px;
 }
+
+.feature2 {
+  display: grid;
+  grid-template-columns: 1fr 32%;
+  height: 540px;
+  margin: 40px 32px 0;
+  background: rgb(55, 55, 55);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.feature2 .feature-products {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+  padding: 28px 22px 28px 28px;
+}
+
+.feature2 .feature-poster {
+  order: 2;
+}
