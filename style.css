@@ -7,12 +7,15 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: rgb(255, 255, 255);
+  padding-top: 122px;
 }
 
 .main-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background: rgb(255, 255, 255);
   border-bottom: 1px solid rgb(229, 229, 229);
 }
