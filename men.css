@@ -248,7 +248,7 @@ body {
 .shoe-img {
   position: relative;
   aspect-ratio: 3 / 4;
-  background: rgb(247, 247, 247);
+  background: white;
 }
 
 .shoe-img > a {
@@ -286,6 +286,7 @@ body {
 
 .shoe-info {
   padding-top: 16px;
+  flex: 1;
 }
 
 .shoe-name {
@@ -302,4 +303,25 @@ body {
 .shoe-price {
   font-size: 16px;
   color: rgb(17, 17, 17);
+}
+
+.shoe-card .keranjang {
+  margin-top: 12px;
+}
+
+.shoe-card .keranjang a {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  background: white;
+  border: 1px solid rgb(17, 17, 17);
+  border-radius: 8px;
+}
+
+.shoe-card .keranjang a:hover {
+  background: black;
+  color: white;
 }

@@ -177,6 +177,8 @@ body {
 
 .product-card {
   flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
   background: rgb(255, 255, 255);
   border: 1px solid rgb(233, 233, 233);
   border-radius: 12px;
@@ -192,6 +194,7 @@ body {
 
 .product-link {
   display: block;
+  flex: 1;
   text-decoration: none;
   color: inherit;
 }
@@ -230,6 +233,28 @@ body {
   font-size: 16px;
   font-weight: bold;
   color: rgb(17, 17, 17);
+}
+
+.keranjang {
+  margin: 0 16px 16px;
+  margin-top: auto;
+}
+
+.keranjang a {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  background: white;
+  border: 1px solid rgb(17, 17, 17);
+  border-radius: 8px;
+}
+
+.keranjang a:hover {
+  background: black;
+  color: white;
 }
 
 .feature {
@@ -286,14 +311,17 @@ body {
   overflow-x: auto;
 }
 
+/* card dibuat kolom: link produk di atas, link keranjang di bawah */
 .feature-card {
   flex: 0 0 260px;
+  display: flex;
+  flex-direction: column;
 }
 
 .feature-card a {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1;
   text-decoration: none;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
@@ -327,6 +355,16 @@ body {
 .feature-status {
   margin-top: 18px;
   font-size: 15px;
+}
+
+.feature-card .feature-keranjang {
+  flex: none;
+  margin-top: 18px;
+  font-size: 15px;
+}
+
+.feature-card .feature-keranjang:hover {
+  text-decoration: underline;
 }
 
 .feature2 {

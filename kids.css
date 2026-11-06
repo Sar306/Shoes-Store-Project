@@ -303,3 +303,24 @@ body {
   font-size: 16px;
   color: rgb(17, 17, 17);
 }
+
+.shoe-card .keranjang {
+  margin-top: 12px;
+}
+
+.shoe-card .keranjang a {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  background: white;
+  border: 1px solid rgb(17, 17, 17);
+  border-radius: 8px;
+}
+
+.shoe-card .keranjang a:hover {
+  background: black;
+  color: white;
+}
