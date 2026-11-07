@@ -241,6 +241,7 @@ body {
 
 
 .shoe-card {
+  border: 1px solid rgb(229, 229, 229);
   display: flex;
   flex-direction: column;
 }
@@ -251,13 +252,13 @@ body {
   background: white;
 }
 
-.shoe-img > a {
+.shoe-img > .shoe-link {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.shoe-img > a img {
+.shoe-img > .shoe-link img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -285,6 +286,7 @@ body {
 }
 
 .shoe-info {
+  margin: 10px;
   padding-top: 16px;
   flex: 1;
 }
@@ -295,7 +297,7 @@ body {
   font-weight: normal;
 }
 
-.shoe-name a {
+.shoe-name .shoe-link {
   text-decoration: none;
   color: rgb(17, 17, 17);
 }
@@ -306,7 +308,7 @@ body {
 }
 
 .shoe-card .keranjang {
-  margin-top: 12px;
+  margin: 12px;
 }
 
 .shoe-card .keranjang a {

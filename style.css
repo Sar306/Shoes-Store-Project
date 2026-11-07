@@ -150,8 +150,8 @@ body {
   font-size: 38px;
   margin-top: 35px;
   margin-bottom: 0px;
-  margin-right: 35px;
-  margin-left: 35px;
+  margin-right: 38px;
+  margin-left: 38px;
   font-family: 'Times New Roman', Times, serif;
   color: rgb(17, 17, 17);
 }
@@ -164,6 +164,7 @@ body {
 
 .product-grid {
   display: flex;
+  background-color: rgba(0, 0, 0, 0.262);
   gap: 24px;
   border-radius: 12px;
   overflow-x: auto;
@@ -311,8 +312,8 @@ body {
   overflow-x: auto;
 }
 
-/* card dibuat kolom: link produk di atas, link keranjang di bawah */
 .feature-card {
+  color: white;
   flex: 0 0 260px;
   display: flex;
   flex-direction: column;
