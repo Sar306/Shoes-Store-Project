@@ -117,15 +117,13 @@ body {
   margin-top: 24px;
 }
 
-.hero .carousel {
+.carousel {
   border-radius: 12px;
   overflow: hidden;
 }
 
-.hero .carousel-item img,
-.hero .carousel-item video {
-  display: block;
-  width: 100%;
+.carousel-item img,
+.carousel-item video {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
