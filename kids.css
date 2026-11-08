@@ -164,38 +164,6 @@ body {
   padding: 32px 32px 64px;
 }
 
-.catalog-toolbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: 25px;
-  margin-right: 25px;
-}
-
-.catalog-filters,
-.catalog-sort {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.catalog-toolbar select {
-  padding: 10px 14px;
-  font-size: 14px;
-  border: 1px solid rgb(204, 204, 204);
-  border-radius: 8px;
-  background: rgb(255, 255, 255);
-  color: rgb(17, 17, 17);
-  cursor: pointer;
-}
-
-.catalog-count {
-  font-size: 14px;
-  color: rgb(120, 120, 120);
-}
-
 .catalog-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -217,25 +185,6 @@ body {
   color: rgb(255, 255, 255);
   border-radius: 4px;
 }
-
-.catalog-more {
-  display: block;
-  margin: 40px auto 0;
-  padding: 14px 40px;
-  font-size: 14px;
-  font-weight: bold;
-  background: rgb(255, 255, 255);
-  color: rgb(17, 17, 17);
-  border: 1px solid rgb(17, 17, 17);
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.catalog-more:hover {
-  background: rgb(17, 17, 17);
-  color: rgb(255, 255, 255);
-}
-
 
 .shoe-card {
   border: 1px solid rgb(229, 229, 229);
