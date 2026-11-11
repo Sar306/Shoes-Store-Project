@@ -169,10 +169,6 @@ body {
   transform: translateY(-4px);
 }
 
-.product-link {
-  flex: 1;
-}
-
 .product-img {
   aspect-ratio: 1 / 1;
   background: rgb(245, 245, 245);
@@ -185,6 +181,7 @@ body {
 }
 
 .product-info {
+  flex: 1;
   padding: 16px;
 }
 

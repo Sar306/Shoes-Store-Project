@@ -161,7 +161,10 @@ body {
 }
 
 .catalog {
-  padding: 32px 32px 64px;
+  padding-top: 32px;
+  padding-bottom: 64px ;
+  padding-right: 32px ;
+  padding-left: 32px;
 }
 
 .catalog-grid {
@@ -171,78 +174,58 @@ body {
   margin: 25px 25px;
 }
 
-.shoe-card {
+.product-card {
   border: 1px solid rgb(229, 229, 229);
   display: flex;
   flex-direction: column;
 }
 
-.shoe-img {
-  position: relative;
+.product-image {
   aspect-ratio: 1 / 1;
   background: white;
 }
 
-.shoe-thumb {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.shoe-thumb img {
+.product-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.shoe-wish {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  width: 28px;
-  height: 28px;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.shoe-wish img {
+.product-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
-  opacity: 0.6;
 }
 
-.shoe-info {
+.product-details {
   margin: 10px;
   padding-top: 16px;
   flex: 1;
 }
 
-.shoe-name {
+.product-name {
   margin-bottom: 8px;
   font-size: 16px;
   font-weight: normal;
 }
 
-.shoe-title {
+.product-title {
   text-decoration: none;
   color: rgb(17, 17, 17);
 }
 
-.shoe-price {
+.product-price {
   font-size: 16px;
   color: rgb(17, 17, 17);
 }
 
-.shoe-card .keranjang {
+.product-card .keranjang {
   margin: 12px;
 }
 
-.shoe-card .keranjang a {
+.product-card .keranjang a {
   display: block;
   padding: 10px 0;
   text-align: center;
@@ -254,7 +237,7 @@ body {
   border-radius: 8px;
 }
 
-.shoe-card .keranjang a:hover {
+.product-card .keranjang a:hover {
   background: black;
   color: white;
 }
