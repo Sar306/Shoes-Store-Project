@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,27 +17,43 @@
   <header class="main-header">
     <div class="navbar">
       <div class="left-nav">
-        <a href="index.html" class="logo">STEP UP</a>
+        <a href="index.php" class="logo">STEP UP</a>
       </div>
 
       <div class="center-nav">
         <form action="" method="get">
-          <input type="search" name="q" placeholder="Cari sepatu idealmu di sini">
+          <input type="search" name="searchbar" placeholder="Cari sepatu idealmu di sini">
           <button type="submit">Cari</button>
         </form>
       </div>
-
       <div class="right-nav">
-        <a href="index.html"><img src="icons/icons8-log-in-32.png" alt="">Login</a>
-        <a href="index.html"><img src="icons/icons8-shopping-basket-32.png" alt="">Keranjang</a>
+          <?php if (isset($_SESSION['id_user'])): ?>
+            <a href="#">
+              <img src="icons/icons8-user-48.png" alt="User">
+              Halo, <?= htmlspecialchars($_SESSION['nama']) ?>
+            </a>
+            <a href="koneksi/logout.php">
+              <img src="icons/icons8-log-out-30.png" alt="Logout">
+              Logout
+            </a>
+          <?php else: ?>
+            <a href="login.php">
+              <img src="icons/icons8-log-in-32.png" alt="">
+              Login
+            </a>
+          <?php endif; ?>
+          <a href="index.php">
+            <img src="icons/icons8-shopping-basket-32.png" alt="">
+            Keranjang
+          </a>
       </div>
     </div>
 
     <nav class="categories">
       <ul>
-        <li><a href="men.html">Men</a></li>
-        <li><a href="women.html">Women</a></li>
-        <li><a href="kids.html">Kids</a></li>
+        <li><a href="men.php">Men</a></li>
+        <li><a href="women.php">Women</a></li>
+        <li><a href="kids.php">Kids</a></li>
       </ul>
     </nav>
   </header>

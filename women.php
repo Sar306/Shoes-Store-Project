@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +10,14 @@
   <title>StepUp Store</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-  <link rel="stylesheet" href="kids.css">
+  <link rel="stylesheet" href="women.css">
   <link rel="icon" href="iconbrowser/Shoes Icon Browser.jpg">
 </head>
 <body>
   <header class="main-header">
     <div class="navbar">
       <div class="left-nav">
-        <a href="index.html" class="logo">STEP UP</a>
+        <a href="index.php" class="logo">STEP UP</a>
       </div>
 
       <div class="center-nav">
@@ -22,39 +26,55 @@
           <button type="submit">Cari</button>
         </form>
       </div>
-
       <div class="right-nav">
-        <a href="index.html"><img src="icons/icons8-log-in-32.png" alt="">Login</a>
-        <a href="index.html"><img src="icons/icons8-shopping-basket-32.png" alt="">Keranjang</a>
+          <?php if (isset($_SESSION['id_user'])): ?>
+            <a href="#">
+              <img src="icons/icons8-user-48.png" alt="User">
+              Halo, <?= htmlspecialchars($_SESSION['nama']) ?>
+            </a>
+            <a href="koneksi/logout.php">
+              <img src="icons/icons8-log-out-30.png" alt="Logout">
+              Logout
+            </a>
+          <?php else: ?>
+            <a href="login.php">
+              <img src="icons/icons8-log-in-32.png" alt="">
+              Login
+            </a>
+          <?php endif; ?>
+          <a href="index.php">
+            <img src="icons/icons8-shopping-basket-32.png" alt="">
+            Keranjang
+          </a>
       </div>
     </div>
 
     <nav class="categories">
       <ul>
-        <li><a href="men.html">Men</a></li>
-        <li><a href="women.html">Women</a></li>
-        <li><a href="kids.html">Kids</a></li>
+        <li><a href="men.php">Men</a></li>
+        <li><a href="women.php">Women</a></li>
+        <li><a href="kids.php">Kids</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section class="category-banner">
-      <img src="Images Kids/Banner Kids2.png" alt="Koleksi Kids">
+      <img src="Images Women/Women Banner.webp" alt="Koleksi Women">
         <div class="category-title">
           <p class="category-label">Collection</p>
-          <h1>Kids</h1>
+          <h1>WOMEN</h1>
         </div>
-        <p class="category-desc">Little feet, big adventures. Explore comfortable, playful, and stylish footwear made for every little step.</p>
+        <p class="category-desc">Step into confidence with footwear that blends comfort, elegance, and style. Find your perfect pair for every occasion.</p>
     </section>
     <section class="catalog">
       <div class="catalog-grid">
         <article class="product-card">
           <div class="product-image">
-            <img src="Images Kids/adidas adistar control 5 led disney kids' play schol sneakers.jpg" alt="adidas Adistar Control 5">
+            <img src="Images Women/Adidas Ballet Shoe Jennie.webp" alt="adidas Ballet Shoe Jennie">
           </div>
           <div class="product-details">
-            <h3 class="product-name"><span class="product-title">adidas Adistar Control 5</span></h3>
-            <p class="product-price">Rp 1.300.000</p>
+            <h3 class="product-name"><span class="product-title">adidas Ballet Shoe Jennie</span></h3>
+            <p class="product-price">Rp 2.400.000</p>
           </div>
           <div class="keranjang">
             <a href="keranjang.html">Tambah ke Keranjang</a>
@@ -62,11 +82,11 @@
         </article>
         <article class="product-card">
           <div class="product-image">
-            <img src="Images Kids/adidas samba jane c kids' play school sneakers.jpg" alt="adidas Samba Jane C">
+            <img src="Images Women/Adidas Samba Ballet.png" alt="adidas Samba Ballet">
           </div>
           <div class="product-details">
-            <h3 class="product-name"><span class="product-title">adidas Samba Jane C</span></h3>
-            <p class="product-price">Rp 950.000</p>
+            <h3 class="product-name"><span class="product-title">adidas Samba Ballet</span></h3>
+            <p class="product-price">Rp 1.600.000</p>
           </div>
           <div class="keranjang">
             <a href="keranjang.html">Tambah ke Keranjang</a>
@@ -74,11 +94,11 @@
         </article>
         <article class="product-card">
           <div class="product-image">
-            <img src="images kids/Adidas Samba Kids Toy Story.jpg" alt="Adidas Samba Kids Toy Story">
+            <img src="Images Women/ADIDAS SAMBA OG W.png" alt="adidas Samba OG W">
           </div>
           <div class="product-details">
-            <h3 class="product-name"><span class="product-title">Adidas Samba Kids Toy Story</span></h3>
-            <p class="product-price">Rp 950.000</p>
+            <h3 class="product-name"><span class="product-title">adidas Samba OG W</span></h3>
+            <p class="product-price">Rp 2.300.000</p>
           </div>
           <div class="keranjang">
             <a href="keranjang.html">Tambah ke Keranjang</a>
@@ -86,11 +106,11 @@
         </article>
         <article class="product-card">
           <div class="product-image">
-            <img src="Images Kids/ADIDAS SAMBA KIDS WHITE.jpg" alt="Adidas Samba Kids White">
+            <img src="Images Women/adidas tokyo women's sneakers - white.jpg" alt="adidas Tokyo Women's Sneakers - White">
           </div>
           <div class="product-details">
-            <h3 class="product-name"><span class="product-title">Adidas Samba Kids White</span></h3>
-            <p class="product-price">Rp 850.000  </p>
+            <h3 class="product-name"><span class="product-title">adidas Tokyo Women's Sneakers - White</span></h3>
+            <p class="product-price">Rp 1.600.000</p>
           </div>
           <div class="keranjang">
             <a href="keranjang.html">Tambah ke Keranjang</a>
@@ -98,11 +118,11 @@
         </article>
         <article class="product-card">
           <div class="product-image">
-            <img src="Images Kids/Converse ctas easy-on mystical rainbows unisex's sneakers.jpg" alt="Converse CTAS Easy-On Mystical Rainbows">
+            <img src="Images Women/Converse Chuck Taylor All Star Lift.jpg" alt="Converse Chuck Taylor All Star Lift">
           </div>
           <div class="product-details">
-            <h3 class="product-name"><span class="product-title">Converse CTAS Easy-On Mystical Rainbows</span></h3>
-            <p class="product-price">Rp 659.000</p>
+            <h3 class="product-name"><span class="product-title">Converse Chuck Taylor All Star Lift</span></h3>
+            <p class="product-price">Rp 1.399.000</p>
           </div>
           <div class="keranjang">
             <a href="keranjang.html">Tambah ke Keranjang</a>
@@ -110,11 +130,11 @@
         </article>
         <article class="product-card">
           <div class="product-image">
-            <img src="Images Kids/Converse ctas kids's sneakers - blue.jpg" alt="Converse CTAS Kids Blue">
+            <img src="Images Women/Converse Chuck Taylor Lo.jpg" alt="Converse Chuck Taylor Lo">
           </div>
           <div class="product-details">
-            <h3 class="product-name"><span class="product-title">Converse CTAS Kids Blue</span></h3>
-            <p class="product-price">Rp 559.000</p>
+            <h3 class="product-name"><span class="product-title">Converse Chuck Taylor Lo</span></h3>
+            <p class="product-price">Rp 1.119.000</p>
           </div>
           <div class="keranjang">
             <a href="keranjang.html">Tambah ke Keranjang</a>
@@ -122,11 +142,11 @@
         </article>
         <article class="product-card">
           <div class="product-image">
-            <img src="Images Kids/New Balance 574 Hook & Loop Boys Play School Sneakers.jpg" alt="New Balance 574 Hook & Loop">
+            <img src="Images Women/Converse Run Star Trainer.jpg" alt="Converse Run Star Trainer">
           </div>
           <div class="product-details">
-            <h3 class="product-name"><span class="product-title">New Balance 574 Hook & Loop</span></h3>
-            <p class="product-price">Rp 899.000</p>
+            <h3 class="product-name"><span class="product-title">Converse Run Star Trainer</span></h3>
+            <p class="product-price">Rp 1.399.000</p>
           </div>
           <div class="keranjang">
             <a href="keranjang.html">Tambah ke Keranjang</a>
@@ -134,11 +154,11 @@
         </article>
         <article class="product-card">
           <div class="product-image">
-            <img src="Images Kids/Nike Air Force 1 Low LV8 x LEGO® Collection.webp" alt="Nike Air Force 1 Low LV8 x LEGO® Collection">
+            <img src="Images Women/HOKA Bondi 9.webp" alt="HOKA Bondi 9">
           </div>
           <div class="product-details">
-            <h3 class="product-name"><span class="product-title">Nike Air Force 1 Low LV8 x LEGO® Collection</span></h3>
-            <p class="product-price">Rp 1.729.000</p>
+            <h3 class="product-name"><span class="product-title">HOKA Bondi 9</span></h3>
+            <p class="product-price">Rp 2.000.000</p>
           </div>
           <div class="keranjang">
             <a href="keranjang.html">Tambah ke Keranjang</a>
@@ -146,10 +166,10 @@
         </article>
         <article class="product-card">
           <div class="product-image">
-            <img src="Images Kids/Nike jordan spizike low kids' grade school basketball shoes.jpg" alt="Nike Jordan Spizike Low">
+            <img src="Images Women/HOKA Clifton 10.webp" alt="HOKA Clifton 10">
           </div>
           <div class="product-details">
-            <h3 class="product-name"><span class="product-title">Nike Jordan Spizike Low</span></h3>
+            <h3 class="product-name"><span class="product-title">HOKA Clifton 10</span></h3>
             <p class="product-price">Rp 1.899.000</p>
           </div>
           <div class="keranjang">
@@ -158,11 +178,11 @@
         </article>
         <article class="product-card">
           <div class="product-image">
-            <img src="Images Kids/Nike v5 rnr kid's grade school sneakers.jpg" alt="Nike V5 RNR Kids">
+            <img src="Images Women/NB 983 unisex sneakers - pink.jpg" alt="NB 983 Unisex Sneakers - Pink">
           </div>
           <div class="product-details">
-            <h3 class="product-name"><span class="product-title">Nike V5 RNR Kids</span></h3>
-            <p class="product-price">Rp 959.000</p>
+            <h3 class="product-name"><span class="product-title">NB 983 Unisex Sneakers - Pink</span></h3>
+            <p class="product-price">Rp 2.599.000</p>
           </div>
           <div class="keranjang">
             <a href="keranjang.html">Tambah ke Keranjang</a>
@@ -170,11 +190,11 @@
         </article>
         <article class="product-card">
           <div class="product-image">
-            <img src="Images Kids/Skechers Go Run Elevate - Astonishing Speed.jpg" alt="Skechers Go Run Elevate - Astonishing Speed">
+            <img src="Images Women/New Balance 740 Unisex Sneakers - Black Pink.jpg" alt="New Balance 740 Unisex Sneakers - Black Pink">
           </div>
           <div class="product-details">
-            <h3 class="product-name"><span class="product-title">Skechers Go Run Elevate - Astonishing Speed</span></h3>
-            <p class="product-price">Rp 299.000</p>
+            <h3 class="product-name"><span class="product-title">New Balance 740 Unisex Sneakers - Black Pink</span></h3>
+            <p class="product-price">Rp 1.899.000</p>
           </div>
           <div class="keranjang">
             <a href="keranjang.html">Tambah ke Keranjang</a>
@@ -182,11 +202,71 @@
         </article>
         <article class="product-card">
           <div class="product-image">
-            <img src="Images Kids/Skechers Max Run Girl's Lifestyle Shoes.jpg" alt="Skechers Max Run Girl's Lifestyle Shoes">
+            <img src="Images Women/New Balance Ellipse Womens Running Shoes - Pink.jpg" alt="New Balance Ellipse Womens Running Shoes - Pink">
           </div>
           <div class="product-details">
-            <h3 class="product-name"><span class="product-title">Skechers Max Run Girl's Lifestyle Shoes </span></h3>
-            <p class="product-price">Rp 599.000</p>
+            <h3 class="product-name"><span class="product-title">New Balance Ellipse Womens Running Shoes - Pink</span></h3>
+            <p class="product-price">Rp 2.399.000</p>
+          </div>
+          <div class="keranjang">
+            <a href="keranjang.html">Tambah ke Keranjang</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="Images Women/Nike Air Max Moto 2K SE.webp" alt="Nike Air Max Moto 2K SE">
+          </div>
+          <div class="product-details">
+            <h3 class="product-name"><span class="product-title">Nike Air Max Moto 2K SE</span></h3>
+            <p class="product-price">Rp 1.759.000</p>
+          </div>
+          <div class="keranjang">
+            <a href="keranjang.html">Tambah ke Keranjang</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="Images Women/Nike p-6000 women's sneakers.jpg" alt="Nike p-6000 women's sneakers">
+          </div>
+          <div class="product-details">
+            <h3 class="product-name"><span class="product-title">Nike p-6000 women's sneakers</span></h3>
+            <p class="product-price">Rp 1.383.000</p>
+          </div>
+          <div class="keranjang">
+            <a href="keranjang.html">Tambah ke Keranjang</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="Images Women/Nike Sabrina 4.webp" alt="Nike Sabrina 4">
+          </div>
+          <div class="product-details">
+            <h3 class="product-name"><span class="product-title">Nike Sabrina 4</span></h3>
+            <p class="product-price">Rp 2.149.000</p>
+          </div>
+          <div class="keranjang">
+            <a href="keranjang.html">Tambah ke Keranjang</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="Images Women/Palermo Dress-Up Sneakers Women.avif" alt="Palermo Dress-Up Sneakers Women">
+          </div>
+          <div class="product-details">
+            <h3 class="product-name"><span class="product-title">Puma Palermo Dress-Up Sneakers Red Maroon </span></h3>
+            <p class="product-price">Rp 1.599.000</p>
+          </div>
+          <div class="keranjang">
+            <a href="keranjang.html">Tambah ke Keranjang</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image">
+            <img src="Images Women/Suede Bloom Sneakers Women.avif" alt="Suede Bloom Sneakers Women">
+          </div>
+          <div class="product-details">
+            <h3 class="product-name"><span class="product-title">Puma Suede Bloom - White</span></h3>
+            <p class="product-price">Rp 1.599.000</p>
           </div>
           <div class="keranjang">
             <a href="keranjang.html">Tambah ke Keranjang</a>
